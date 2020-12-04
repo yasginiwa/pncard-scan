@@ -1,0 +1,54 @@
+page {
+  background-color: #ecf0f1;
+}
+
+.header {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header image {
+  width: 80%;
+  transform: translateY(60rpx);
+}
+
+.header view {
+  letter-spacing: 5rpx;
+  color: #5f5d5d;
+  transform: translateY(120rpx);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh;
+}
+
+.main button {
+  background-color: #f3c516;
+  border-radius: 10rpx;
+  height: 90rpx;
+  width: 80%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .tips {
+  color: #8a8a8a;
+  font-size: 28rpx;
+}
+
+.tips text:nth-child(2) {
+  color: #58bebb;
+  display: inline-block;
+  border-bottom: #58bebb solid 2rpx;
+  transform: translateX(10rpx);
+}

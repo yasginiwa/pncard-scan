@@ -1,0 +1,11 @@
+<view class="header">
+  <image src="../../assets/banner.png" mode="widthFix"></image>
+  <view class="description">扫描品诺卡二维码查询余额</view>
+</view>
+<view class="main">
+  <button type="plain" size="normal">扫码查询</button>
+  <view class="tips">
+    <text>找不到二维码？试试</text>
+    <text>账号密码查询</text>
+  </view>
+</view>
