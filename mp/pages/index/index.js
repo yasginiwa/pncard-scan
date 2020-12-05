@@ -1,3 +1,7 @@
+import { scanQRCode } from '../../utils/util'
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast'
+import { request } from '../../utils/request'
+
 Page({
 
   /**
@@ -12,6 +16,39 @@ Page({
    */
   onLoad: function (options) {
     
+  },
+
+  /**
+   * 处理点击扫码查询
+   */
+  async handleScanQRCode() {
+    let scanResult = await scanQRCode()
+
+    const paycode = scanResult.result
+
+    const res = await request({ url: '/mppncard', data: { paycode }, method: 'POST' })
+
+    let resData = res.data
+
+    console.log(resData)
+
+    if (resData.meta.status === 200) {  //  查询余额成功
+      wx.navigateTo({
+        url: '../funds/funds'
+      })
+    } else {  //  查询余额失败
+      Toast.fail(resData.meta.msg) 
+    }
+
+  },
+
+  /**
+   * 处理账号密码查询
+   */
+  handleAccountQuery() {
+    wx.navigateTo({
+      url: '../account/account',
+    })
   },
 
   /**

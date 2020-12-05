@@ -9,7 +9,7 @@ const login = require('./routes/api/v1/public/login')
 const users = require('./routes/api/v1/private/users')
 const categories = require('./routes/api/v1/private/categories')
 const openid = require('./routes/api/v1/public/openid')
-const md5 = require('./routes/api/v1/public/md5')
+const mppncard = require('./routes/api/v1/public/mppncard')
 
 let app = new Koa()
 
@@ -30,7 +30,9 @@ app.use(resextra)
 router.use(`${baseURL.public}/regist`, regist)
 router.use(`${baseURL.public}/login`, login)
 router.use(`${baseURL.public}/openid`, openid)
-router.use(`${baseURL.public}/md5`, md5)
+
+//  小程序品诺卡接口
+router.use(`${baseURL.public}/mppncard`, mppncard)
 
 //  私有接口路由
 router.use(`${baseURL.private}/users`, users)

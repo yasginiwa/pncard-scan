@@ -14,6 +14,17 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const scanQRCode = () => {
+  return new Promise((resolve, reject) => {
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: res => resolve(res),
+      fail: err => reject(err)
+    })
+  })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime,
+  scanQRCode
 }

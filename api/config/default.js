@@ -18,7 +18,15 @@ module.exports = {
         
     },
     weapp_config: {
-        appid: 'wx6e12c795fe0e73c5',
-        secret: '1efc00a55d22cc93edce26bc8561f194'
+        appid: '',
+        secret: ''
+    },
+    pncard_config: {
+        token: 'HGPINConsult',
+        method: 'Consult',
+        signtype: 'md5',
+        shopid: 5,
+        signKey: 'MLIPaySign2019f790364ebce149408b05601ef580e226IPaySign2100',
+        charset: 'gbk'
     }
 }

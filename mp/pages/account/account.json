@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "账号密码查询",
+  "usingComponents": {
+    "van-field": "../../miniprogram_npm/@vant/weapp/field"
+  }
+}
