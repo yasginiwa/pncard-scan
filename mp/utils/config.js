@@ -1,4 +1,4 @@
-const baseURL = 'http://127.0.0.1:3000/api/v1/public'
+const baseURL = 'https://pinnuo.hgsp.cn:10501/api/v1/public'
   
 
 module.exports = {

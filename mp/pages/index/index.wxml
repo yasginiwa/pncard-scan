@@ -3,7 +3,7 @@
   <view class="description">刮开二维码涂层，点击扫描查询余额</view>
 </view>
 <view class="main">
-  <button type="plain" size="normal" bindtap="handleScanQRCode">扫码查询</button>
+  <button style="width: 80vw;" bindtap="handleScanQRCode">扫码查询</button>
   <view class="tips">
     <text>找不到二维码？试试</text>
     <text bindtap="handleAccountQuery">账号密码查询</text>

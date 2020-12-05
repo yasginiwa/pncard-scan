@@ -26,18 +26,22 @@ Page({
 
     const paycode = scanResult.result
 
-    const res = await request({ url: '/mppncard', data: { paycode }, method: 'POST' })
-
-    let resData = res.data
-
-    console.log(resData)
+    const { data: resData } = await request({ url: '/mppncard', data: { paycode }, method: 'POST' })
 
     if (resData.meta.status === 200) {  //  查询余额成功
+
+      let { lessmoney } = resData.data.content
+
+      lessmoney = lessmoney.toFixed(2)
+
       wx.navigateTo({
-        url: '../funds/funds'
+        url: `../funds/funds?lessmoney=${lessmoney}`,
       })
+
     } else {  //  查询余额失败
-      Toast.fail(resData.meta.msg) 
+
+      Toast.fail(resData.meta.msg)
+
     }
 
   },

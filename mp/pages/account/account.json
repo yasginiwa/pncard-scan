@@ -1,6 +1,7 @@
 {
-  "navigationBarTitleText": "账号密码查询",
+  "navigationBarTitleText": "品诺卡号密码查询",
   "usingComponents": {
-    "van-field": "../../miniprogram_npm/@vant/weapp/field"
+    "van-field": "../../miniprogram_npm/@vant/weapp/field",
+    "van-toast": "../../miniprogram_npm/@vant/weapp/toast"
   }
 }

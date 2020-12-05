@@ -28,7 +28,8 @@ export const request = params => {
                 wx.hideLoading()
                 wx.showToast({
                   title: '网络不给力...',
-                  icon: 'none'
+                  icon: 'none',
+                  duration: 2000
                 })
                 reject(err);//返回失败数据
             },

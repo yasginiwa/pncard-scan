@@ -1,2 +1,16 @@
 <!--pages/funds/funds.wxml-->
-<text>pages/funds/funds.wxml</text>
+<view class="main">
+  <view class="funds-icon">
+    <image mode="widthFix" src="../../assets/funds.png"></image>
+  </view>
+
+  <view class="funds-show">
+    <text>品诺卡余额(元)</text>
+    <text>¥ {{ lessmoney }}</text>
+  </view>
+
+  <view class="funds-thanks">
+    <button style="width: 80vw;" bindtap="handleBack">感谢使用</button>
+  </view>
+
+</view>

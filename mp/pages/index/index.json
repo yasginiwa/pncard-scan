@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "扫码查询",
+  "navigationBarTitleText": "品诺卡扫码查询",
   "usingComponents": {
     "van-toast": "../../miniprogram_npm/@vant/weapp/toast"
   }
