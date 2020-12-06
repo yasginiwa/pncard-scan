@@ -5,9 +5,9 @@
 </view>
 <view class="main">
   <view class="input">
-    <van-field model:value="{{ cardNo }}" clearable label="卡号" placeholder="请输入卡号" />
+    <van-field model:value="{{ cardNo }}" clearable type="digit" adjust-position auto-focus label="卡号" placeholder="请输入卡号" />
 
-    <van-field model:value="{{ cardPassword }}" clearable type="password" label="密码" placeholder="请输入密码" border="{{ false }}" />
+    <van-field model:value="{{ cardPassword }}" clearable type="digit" password adjust-position label="密码" placeholder="请输入密码" border="{{ false }}" />
   </view>
   <button style="width: 80vw;" bindtap="handleAccountQuery">查询余额</button>
 </view>

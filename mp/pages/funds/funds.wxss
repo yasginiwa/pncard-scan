@@ -12,9 +12,6 @@ page {
   height: 60vh;
 }
 
-.funds-icon {
-}
-
 .funds-icon image {
   width: 200rpx;
 }
@@ -39,10 +36,6 @@ page {
 .funds-show text:nth-child(2) {
   font-size: 40rpx;
   font-weight: bold;
-}
-
-.funds-thanks {
-  
 }
 
 .funds-thanks button {

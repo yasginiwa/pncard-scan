@@ -35,24 +35,21 @@ Page({
       //  拼接卡号密码为二维码扫描内容
       let paycode = `PN${cardNo}${cardPassword}`
 
-      const { data: resData } = await request({ url: '/mppncard', data: { paycode }, method: 'POST' })
+      const { data: res } = await request({ url: '/mppncard', data: { paycode }, method: 'POST' })
 
-      if (resData.meta.status === 200) {  //  查询余额成功
-
-        let { lessmoney } = resData.data.content
-
-        lessmoney = lessmoney.toFixed(2)
-
+      if (res.meta.status === 200) {  //  查询余额成功
+  
+        let { data:cardinfo } = res
+  
         wx.navigateTo({
-          url: `../funds/funds?lessmoney=${lessmoney}`,
+          url: `../funds/funds?cardinfo=${JSON.stringify(cardinfo)}`,
         })
-
+  
       } else {  //  查询余额失败
-
-        Toast.fail(resData.meta.msg)
-
+  
+        Toast.fail(res.meta.msg)
+  
       }
-
     }
   },
 

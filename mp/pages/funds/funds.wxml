@@ -1,4 +1,6 @@
 <!--pages/funds/funds.wxml-->
+<wxs module="filter" src="../../utils/numberToFixed.wxs"></wxs>
+
 <view class="main">
   <view class="funds-icon">
     <image mode="widthFix" src="../../assets/funds.png"></image>
@@ -6,7 +8,8 @@
 
   <view class="funds-show">
     <text>品诺卡余额(元)</text>
-    <text>¥ {{ lessmoney }}</text>
+    <text wx:if="{{ cardinfo.paystatus == 1 }}">¥ {{ filter.numberToFixed(cardinfo.content.lessmoney) }}</text>
+    <text wx:else>{{ cardinfo.msg }}</text>
   </view>
 
   <view class="funds-thanks">

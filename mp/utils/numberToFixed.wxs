@@ -1,0 +1,11 @@
+//  在wxml中 fixed 数字 弥补js计算不准的问题
+
+var filter = {
+	numberToFixed: function(value){
+		return value.toFixed(2)
+	}
+}
+// 导出对外暴露的属性
+module.exports = {
+	numberToFixed: filter.numberToFixed
+}
